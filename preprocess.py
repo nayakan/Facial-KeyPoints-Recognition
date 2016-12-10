@@ -6,29 +6,11 @@ import matplotlib.pyplot as plt
 
 facial_recognition_df=pd.read_csv("training.csv")
 
-#has 15 values. Preethi
+#has 15 values. 
 all_features=pd.DataFrame(facial_recognition_df[:2285]) #0-2284
 
-#has 4 values. Krima
+#has 4 values. 
 some_features=pd.DataFrame(facial_recognition_df[2285:]) #2285-
-"""
-COLUMNS IN DATA SET
-Index([u'left_eye_center_x', u'left_eye_center_y',
-       u'right_eye_center_x',u'right_eye_center_y',
-       u'left_eye_inner_corner_x',u'left_eye_inner_corner_y',
-       u'left_eye_outer_corner_x',u'left_eye_outer_corner_y',
-       u'right_eye_inner_corner_x',u'right_eye_inner_corner_y',
-       u'right_eye_outer_corner_x',u'right_eye_outer_corner_y',
-       u'left_eyebrow_inner_end_x',u'left_eyebrow_inner_end_y',
-       'left_eyebrow_outer_end_x',u'left_eyebrow_outer_end_y',
-       u'right_eyebrow_inner_end_x',u'right_eyebrow_inner_end_y',
-       u'right_eyebrow_outer_end_x',u'right_eyebrow_outer_end_y',
-       u'nose_tip_x', u'nose_tip_y',
-       u'mouth_left_corner_x', u'mouth_left_corner_y',
-       u'mouth_right_corner_x',u'mouth_right_corner_y',
-       u'mouth_center_top_lip_x',u'mouth_center_top_lip_y',
-       u'mouth_center_bottom_lip_x',u'mouth_center_bottom_lip_y',
-       u'Image'],dtype='object')
 
 #left_eye_center_x
 #filled na with median. mean~=median
@@ -117,7 +99,6 @@ all_features['right_eyebrow_inner_end_y'].fillna(all_features['right_eyebrow_inn
 plt.hist(all_features['mouth_left_corner_x'].dropna(), bins=100)
 all_features['mouth_left_corner_x'].fillna(all_features['mouth_left_corner_x'].median(), inplace=True)
 
-#REDO? PEAK NOT AS NARROW AS X
 #'mouth_left_corner_y'
 #filled na with median. mean~=median
 plt.hist(all_features['mouth_left_corner_y'].dropna(), bins=100)
@@ -128,7 +109,6 @@ all_features['mouth_left_corner_y'].fillna(all_features['mouth_left_corner_y'].m
 plt.hist(all_features['mouth_right_corner_x'].dropna(), bins=100)
 all_features['mouth_right_corner_x'].fillna(all_features['mouth_right_corner_x'].median(), inplace=True)
 
-#REDO? PEAK NOT AS NARROW AS X
 #'mouth_right_corner_y'
 #filled na with median. mean~=median
 plt.hist(all_features['mouth_right_corner_y'].dropna(), bins=100)
@@ -139,7 +119,6 @@ all_features['mouth_right_corner_y'].fillna(all_features['mouth_right_corner_y']
 plt.hist(all_features['mouth_center_top_lip_x'].dropna(), bins=100)
 all_features['mouth_center_top_lip_x'].fillna(all_features['mouth_center_top_lip_x'].median(), inplace=True)
 
-#REDO? PEAK NOT AS NARROW AS X
 #'mouth_center_top_lip_y'
 #filled na with median. mean~=median
 plt.hist(all_features['mouth_center_top_lip_y'].dropna(), bins=100)
@@ -150,7 +129,6 @@ all_features['mouth_center_top_lip_y'].fillna(all_features['mouth_center_top_lip
 plt.hist(all_features['mouth_center_bottom_lip_x'].dropna(), bins=100)
 all_features['mouth_center_bottom_lip_x'].fillna(all_features['mouth_center_bottom_lip_x'].median(), inplace=True)
 
-#REDO? PEAK NOT AS NARROW AS X
 #'mouth_center_bottom_lip_y'
 #filled na with median. mean~=median
 plt.hist(all_features['mouth_center_bottom_lip_y'].dropna(), bins=100)
@@ -220,9 +198,3 @@ all_features['right_eyebrow_outer_end_y'].hist(bins=70, ax=axis2)
 
 
 all_features.to_csv("cleaned_training_all_features.csv")
-
-
-kNN
-lin reg
-clustering (?)
-"""

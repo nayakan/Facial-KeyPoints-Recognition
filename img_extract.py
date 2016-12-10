@@ -1,14 +1,14 @@
-from PIL import Image
-import pandas #as pd
+#from PIL import Image
+import Image
+import pandas as pd
 
 import os
 
 
-data= pandas.read_csv('training.csv')
-      #pd.read_csv('training.csv')
+data=pd.read_csv('training.csv')
 
 def getimage(each):
-    img = Image.new( 'RGB', (96,96), "black") 
+    img = Image.new( 'RGB', (96,96), "black")
     pixels = img.load() # create the pixel map
     
     cot=[int(i) for i in each.split(' ')]
@@ -18,12 +18,14 @@ def getimage(each):
     return img
 
 if __name__=='__main__':
-    data= pandas.read_csv('training.csv')    #pd.read_csv('training.csv')
+    data=pd.read_csv('training.csv')
     try:
         os.mkdir(os.getcwd()+'/imgs')
     except:
         print 'X'
 
+    
     print('there are '+str(len(data.Image))+' images in total\nstart extracting......')
     for i in range(1,len(data.Image)+1):
         getimage(data.Image[i-1]).save(os.getcwd()+'/imgs/'+str(i)+'.jpg')
+    
