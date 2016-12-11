@@ -14,10 +14,10 @@ The following is the list of the purpose of ech script:
 3.ColMeansMethod.R : R script to implement the basic Column Means model.
 4.PCA_script.R :R script to implement PCA on Training data: 7049 images.
 5.MeanPatchScript.R :R script to implement the basic mean patch searching algorithm with
-                      - Image flipping
-                      - Contrast Stretching/Histogram Stretching
-                      - Histogram equalization
-                      - Gaussian Blurring
+                      -a) Image flipping
+                      -b) Contrast Stretching/Histogram Stretching
+                      -c) Histogram equalization
+                      -d) Gaussian Blurring
 6.model1_NeuralNetwork.py : Python script for Neural Networks
 7.model2_CNN.py :Python script for Convolutional Neural Networks
 8.model3_CNN.py :Python script for Convolutional Neural Networks with Image flipping.
