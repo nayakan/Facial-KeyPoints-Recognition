@@ -20,5 +20,5 @@ The following is the list of the purpose of ech script:
                       - Gaussian Blurring
 6.model1_NeuralNetwork.py : Python script for Neural Networks
 7.model2_CNN.py :Python script for Convolutional Neural Networks
-8.model3_CNN.py :Python script for Convolutional Neural Networks with Image flipping
-                      
+8.model3_CNN.py :Python script for Convolutional Neural Networks with Image flipping.
+                
