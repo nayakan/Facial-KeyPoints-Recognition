@@ -29,4 +29,7 @@ The following is the list of the purpose of each script:
 7.model2_CNN.py :Python script for Convolutional Neural Networks
 
 8.model3_CNN.py :Python script for Convolutional Neural Networks with Image flipping.
-               
+
+![screen shot 2017-10-11 at 09 11 04](https://user-images.githubusercontent.com/17459420/31452566-24989c1e-ae64-11e7-81c2-de73b0c5e028.png)
+
+               
